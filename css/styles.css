@@ -181,4 +181,11 @@ h1 {
     position: static;
     transform: rotate(0);
   }
+  .testimonial-subtitle{
+      font-size: 2rem;
+      line-height: 3rem;
+  }
+  .testimonial-img{
+      width: 70px;
+  }
 }
