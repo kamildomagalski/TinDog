@@ -151,7 +151,7 @@
             <p>10 Messages Per Day</p>
             <p>Unlimited App Usage</p>
             <p class="unvisible">text</p>
-            <button type="button" class="btn btn-outline-dark btn-block">Sign up</button>
+            <button type="button" class="btn btn-outline-dark btn-block" onclick=playMeSomeMusic()>Sign up</button>
           </div>
         </div>
       </div>
@@ -207,6 +207,38 @@
       <p class="footer-copyright">© Copyright 2018 TinDog</p>
     
   </section>
+
+  <div id="youtube-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close-youtube-modal" onclick=turnOffTheMusic()>&times;</span>
+      <iframe id="youtube-iframe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+  <script>
+    const youtubeModal = document.getElementById("youtube-modal");
+    const youtubeiFrame = document.getElementById("youtube-iframe");
+
+    playMeSomeMusic = function() {
+      youtubeModal.style.display = "block";
+      youtubeiFrame.src = "https://www.youtube.com/embed/y654TxcRuL0?start=6&autoplay=1";
+    }
+
+    turnOffTheMusic = function() {
+      youtubeModal.style.display = "none";
+      youtubeiFrame.src = "";
+    }
+
+    window.onclick = function(event) {
+      if (event.target === youtubeModal) {
+        turnOffTheMusic();
+      }
+    }
+
+  </script>
 </body>
 
 </html>
