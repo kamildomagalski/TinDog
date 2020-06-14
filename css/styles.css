@@ -196,9 +196,14 @@ p {
   margin: 2%;
 }
 
+
 @media (max-width: 991px) {
-  #title {
+  #title .container-fluid {
     text-align: center;
+  }
+
+  .download-button{
+    margin: 5% 0;
   }
 
   .rotate-img {
@@ -213,5 +218,11 @@ p {
 
   .testimonial-img {
     width: 70px;
+  }
+}
+
+@media (max-width: 480px){
+  #title h1{
+    font-size: 2rem;
   }
 }
